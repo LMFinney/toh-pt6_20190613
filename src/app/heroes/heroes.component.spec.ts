@@ -1,5 +1,9 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed,
+  async
+} from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { HeroesComponent } from './heroes.component';
@@ -11,13 +15,17 @@ describe('HeroesComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [HeroesComponent],
-      imports: [RouterTestingModule.withRoutes([]), HttpClientTestingModule],
-    })
-      .compileComponents();
+      imports: [
+        RouterTestingModule.withRoutes([]),
+        HttpClientTestingModule
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeroesComponent);
+    fixture = TestBed.createComponent(
+      HeroesComponent
+    );
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

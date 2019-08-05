@@ -9,7 +9,9 @@ fdescribe('DashboardComponent', () => {
   let svcSpy: jasmine.SpyObj<HeroService>;
 
   beforeEach(() => {
-    svcSpy = jasmine.createSpyObj<HeroService>(['getHeroes']);
+    svcSpy = jasmine.createSpyObj<HeroService>([
+      'getHeroes'
+    ]);
     svcSpy.getHeroes.and.returnValue(of(HEROES));
 
     component = new DashboardComponent(svcSpy);

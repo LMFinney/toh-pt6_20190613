@@ -9,6 +9,8 @@
     "test": "ng test",
     "build": "ng build --prod",
     "e2e": "ng e2e",
+    "prettier": "prettier --check \"**/*.{html,ts,css,scss,json}\"",
+    "prettier:fix": "prettier --write \"**/*.{html,ts,css,scss,json}\"",
     "ng": "ng"
   },
   "keywords": [],
@@ -47,6 +49,7 @@
     "karma-jasmine-html-reporter": "^1.4.2",
     "lodash": "^4.16.2",
     "ngx-spec": "^2.1.4",
+    "prettier": "1.18.2",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",

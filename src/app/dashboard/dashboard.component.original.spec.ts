@@ -1,4 +1,8 @@
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed,
+  async
+} from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
 
@@ -14,26 +18,32 @@ describe('DashboardComponent', () => {
   let getHeroesSpy;
 
   beforeEach(async(() => {
-    heroService = jasmine.createSpyObj('HeroService', ['getHeroes']);
-    getHeroesSpy = heroService.getHeroes.and.returnValue(of(HEROES));
+    heroService = jasmine.createSpyObj(
+      'HeroService',
+      ['getHeroes']
+    );
+    getHeroesSpy = heroService.getHeroes.and.returnValue(
+      of(HEROES)
+    );
     TestBed.configureTestingModule({
       declarations: [
         DashboardComponent,
         HeroSearchComponent
       ],
-      imports: [
-        RouterTestingModule.withRoutes([])
-      ],
+      imports: [RouterTestingModule.withRoutes([])],
       providers: [
-        { provide: HeroService, useValue: heroService }
+        {
+          provide: HeroService,
+          useValue: heroService
+        }
       ]
-    })
-      .compileComponents();
-
+    }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardComponent);
+    fixture = TestBed.createComponent(
+      DashboardComponent
+    );
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -43,7 +53,10 @@ describe('DashboardComponent', () => {
   });
 
   it('should display "Top Heroes" as headline', () => {
-    expect(fixture.nativeElement.querySelector('h3').textContent).toEqual('Top Heroes');
+    expect(
+      fixture.nativeElement.querySelector('h3')
+        .textContent
+    ).toEqual('Top Heroes');
   });
 
   it('should call heroService', async(() => {
@@ -51,7 +64,9 @@ describe('DashboardComponent', () => {
   }));
 
   it('should display 4 links', async(() => {
-    expect(fixture.nativeElement.querySelectorAll('a').length).toEqual(4);
+    expect(
+      fixture.nativeElement.querySelectorAll('a')
+        .length
+    ).toEqual(4);
   }));
-
 });

@@ -1,3 +1,4 @@
 {
-  "editor.hover.enabled": false
+  "editor.hover.enabled": false,
+  "scm.diffDecorations": "none"
 }

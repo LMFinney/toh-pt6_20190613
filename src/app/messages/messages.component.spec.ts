@@ -1,4 +1,8 @@
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed,
+  async
+} from '@angular/core/testing';
 
 import { MessagesComponent } from './messages.component';
 
@@ -9,12 +13,13 @@ describe('MessagesComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [MessagesComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MessagesComponent);
+    fixture = TestBed.createComponent(
+      MessagesComponent
+    );
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
